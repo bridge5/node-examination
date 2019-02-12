@@ -11,6 +11,26 @@ $ cd node-examination/swagger
 $ npm start
 
 $ open http://localhost:3030
+
+
+// API server
+$ cd node-examination/
+$ node server.js
+
+$ open http://localhost:3000
+
+
+// MongoDB url
+mongodb://localhost:27017/node-examination 
+(defined in /config/database.config.js)
+
+
+// API urls
+[POST] http://localhost:3000/player
+[GET] http://localhost:3000/players
+[GET] http://localhost:3000/player/{playerId}
+[PUT] http://localhost:3000/player
+[DELETE] http://localhost:3000/player/{playerId}
 ```
 
 ## Tasks
