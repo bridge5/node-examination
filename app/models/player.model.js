@@ -1,12 +1,8 @@
 const mongoose = require('mongoose');
 
-require('mongoose-long')(mongoose);
-
-var Long = mongoose.Schema.Types.Long;
-
 const PlayerSchema = mongoose.Schema({
     id: {
-        type: Long,
+        type: Number,
         required: true
     },
     name: {

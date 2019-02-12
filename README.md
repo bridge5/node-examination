@@ -15,13 +15,15 @@ $ open http://localhost:3030
 
 // API server
 $ cd node-examination/
+$ npm install
 $ node server.js
 
 $ open http://localhost:3000
 
 
 // MongoDB url
-mongodb://localhost:27017/node-examination 
+development: mongodb://localhost:27017/node-examination
+test: mongodb://localhost:27017/node-examination-test
 (defined in /config/database.config.js)
 
 
@@ -31,6 +33,12 @@ mongodb://localhost:27017/node-examination
 [GET] http://localhost:3000/player/{playerId}
 [PUT] http://localhost:3000/player
 [DELETE] http://localhost:3000/player/{playerId}
+
+
+// Run tests
+$ cd node-examination/
+$ npm install -g mocha
+$ mocha
 ```
 
 ## Tasks

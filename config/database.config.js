@@ -1,3 +1,6 @@
 module.exports = {
-    url: 'mongodb://localhost:27017/node-examination'
+    url: {
+        development: 'mongodb://localhost:27017/node-examination',
+        test: 'mongodb://localhost:27017/node-examination-test'
+    }
 }
