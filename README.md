@@ -11,6 +11,34 @@ $ cd node-examination/swagger
 $ npm start
 
 $ open http://localhost:3030
+
+
+// API server
+$ cd node-examination/
+$ npm install
+$ node server.js
+
+$ open http://localhost:3000
+
+
+// MongoDB url
+development: mongodb://localhost:27017/node-examination
+test: mongodb://localhost:27017/node-examination-test
+(defined in /config/database.config.js)
+
+
+// API urls
+[POST] http://localhost:3000/player
+[GET] http://localhost:3000/players
+[GET] http://localhost:3000/player/{playerId}
+[PUT] http://localhost:3000/player
+[DELETE] http://localhost:3000/player/{playerId}
+
+
+// Run tests
+$ cd node-examination/
+$ npm install -g mocha
+$ mocha
 ```
 
 ## Tasks
