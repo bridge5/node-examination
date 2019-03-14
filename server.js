@@ -18,3 +18,5 @@ app.listen(3000, () => {
 });
 
 routes(app)
+
+module.exports = app;
