@@ -23,3 +23,9 @@ $ open http://localhost:3030
 
 - Please check for small things like syntax errors, since details matter.
 - Please deliver something that works, non working project is an automatic disqualification.
+
+## DB connect setting 
+
+```
+change your DB_URI = "your DB URI" in db/index.js
+```
