@@ -1,0 +1,5 @@
+{
+  "env" : {
+    "MONGOA_ATLAS_PW": "oracleocp"
+  }
+}

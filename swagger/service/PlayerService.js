@@ -1,5 +1,6 @@
 'use strict';
 
+const PlayerModel = require('../models/Players');
 
 /**
  * Create a new player
@@ -8,10 +9,12 @@
  * body Player Player object
  * no response value expected for this operation
  **/
-exports.addPlayer = function(body) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+exports.addPlayer = function(player) {
+  const playerModel = new PlayerModel({
+    name: player.name,
+    position: player.position
+  })
+  return playerModel.save();
 }
 
 
@@ -23,9 +26,7 @@ exports.addPlayer = function(body) {
  * no response value expected for this operation
  **/
 exports.deletePlayer = function(playerId) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+  return PlayerModel.deleteOne({ id: playerId });
 }
 
 
@@ -37,19 +38,7 @@ exports.deletePlayer = function(playerId) {
  * returns Player
  **/
 exports.getPlayerById = function(playerId) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "name" : "LeBron",
-  "id" : 0,
-  "position" : "C"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+  return PlayerModel.findOne({ id: playerId });
 }
 
 
@@ -60,9 +49,13 @@ exports.getPlayerById = function(playerId) {
  * body Player Player object that needs to be added to the team
  * no response value expected for this operation
  **/
-exports.updatePlayer = function(body) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+exports.updatePlayer = function(player) {
+  const { id, name, position } = player;
+  return PlayerModel.updateOne({ id: id }, { 
+    $set: { 
+        name: name, 
+        position: position 
+    }
+  }, { runValidators: true })
 }
 
