@@ -27,5 +27,5 @@ $ open http://localhost:3030
 ## DB connect setting 
 
 ```
-change your DB_URI = "your DB URI" in db/index.js
+change your db connfig in config/config.js
 ```
