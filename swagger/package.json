@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm install",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
   },
   "keywords": [
     "swagger"
@@ -14,7 +16,13 @@
   "private": true,
   "dependencies": {
     "connect": "^3.6.6",
+    "cors": "^2.8.5",
     "js-yaml": "^3.12.1",
     "swagger-tools": "0.10.4"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
+    "prettier": "^1.19.1"
   }
 }

@@ -1,33 +1,39 @@
-'use strict';
+"use strict";
 
+const db = require("../utils/mockDB.js");
 
 /**
  * Create a new player
- * 
+ *
  *
  * body Player Player object
  * no response value expected for this operation
  **/
 exports.addPlayer = function(body) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
+    db.mockDB.push(body);
     resolve();
   });
-}
-
+};
 
 /**
  * Deletes a player
- * 
+ *
  *
  * playerId Long Player id to delete
  * no response value expected for this operation
  **/
 exports.deletePlayer = function(playerId) {
   return new Promise(function(resolve, reject) {
-    resolve();
+    const playerIndex = db.mockDB.findIndex(player => player.id === playerId);
+    if (playerIndex !== -1) {
+      db.mockDB.splice(playerIndex, 1);
+      resolve();
+    } else {
+      reject();
+    }
   });
-}
-
+};
 
 /**
  * Find player by ID
@@ -38,31 +44,30 @@ exports.deletePlayer = function(playerId) {
  **/
 exports.getPlayerById = function(playerId) {
   return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "name" : "LeBron",
-  "id" : 0,
-  "position" : "C"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
+    const player = db.mockDB.find(player => player.id === playerId);
+    if (player) {
+      resolve(player);
     } else {
-      resolve();
+      reject({ message: "No match user" });
     }
   });
-}
-
+};
 
 /**
  * Update an existing player
- * 
+ *
  *
  * body Player Player object that needs to be added to the team
  * no response value expected for this operation
  **/
 exports.updatePlayer = function(body) {
   return new Promise(function(resolve, reject) {
-    resolve();
+    const playerIndex = db.mockDB.findIndex(player => player.id === body.id);
+    if (playerIndex !== -1) {
+      db.mockDB[playerIndex] = body;
+      resolve();
+    } else {
+      reject();
+    }
   });
-}
-
+};
