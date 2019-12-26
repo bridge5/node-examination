@@ -8,10 +8,13 @@
  * body Player Player object
  * no response value expected for this operation
  **/
-exports.addPlayer = function(body) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+exports.addPlayer = async function(body) {
+  const newPlayer = new global.db.Player({
+    id: body.id,
+    name: body.name,
+    position: body.position
+  })
+  return newPlayer.save()
 }
 
 
@@ -22,10 +25,10 @@ exports.addPlayer = function(body) {
  * playerId Long Player id to delete
  * no response value expected for this operation
  **/
-exports.deletePlayer = function(playerId) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+exports.deletePlayer = async function(playerId) {
+  const result = await global.db.Player.deleteOne({id: playerId})
+  if(result.deletedCount === 0) return 404
+  return 200
 }
 
 
@@ -36,20 +39,10 @@ exports.deletePlayer = function(playerId) {
  * playerId Long ID of player to return
  * returns Player
  **/
-exports.getPlayerById = function(playerId) {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = {
-  "name" : "LeBron",
-  "id" : 0,
-  "position" : "C"
-};
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
+exports.getPlayerById = async function(playerId) {
+  const dbPlayer = await global.db.Player.findOne({id: playerId})
+  if(!dbPlayer) return 404
+  return dbPlayer
 }
 
 
@@ -60,9 +53,12 @@ exports.getPlayerById = function(playerId) {
  * body Player Player object that needs to be added to the team
  * no response value expected for this operation
  **/
-exports.updatePlayer = function(body) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+exports.updatePlayer = async function(body) {
+  const dbPlayer = await global.db.Player.findOne({id: body.id})
+  if(!dbPlayer) return 404
+  dbPlayer.name = body.name || dbPlayer.name
+  dbPlayer.position = body.position || dbPlayer.position
+  await dbPlayer.save()
+  return 200
 }
 
