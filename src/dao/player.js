@@ -1,18 +1,17 @@
-import mongoose from './database/mongodb';
+import mongoose from "./database/mongodb";
 
 const schema = mongoose.Schema(
   {
     id: {
-      type: Number,
-      required: true
+      type: Number
     },
     name: {
       type: String,
-      required: true
+      required: [true, "name is required"]
     },
     position: {
       type: String,
-      required: true
+      enum: ["C", "PF", "SF", "PG", "SG"]
     }
   },
   {
