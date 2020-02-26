@@ -1,4 +1,5 @@
 'use strict';
+var PlayerAPIs = require('../api/Player');
 
 
 /**
@@ -8,8 +9,9 @@
  * body Player Player object
  * no response value expected for this operation
  **/
-exports.addPlayer = function(body) {
+exports.addPlayer = function(ctx) {
   return new Promise(function(resolve, reject) {
+    const res = PlayerAPIs.addPlayer(ctx);
     resolve();
   });
 }

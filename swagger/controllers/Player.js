@@ -4,8 +4,8 @@ var utils = require('../utils/writer.js');
 var Player = require('../service/PlayerService');
 
 module.exports.addPlayer = function addPlayer (req, res, next) {
-  var body = req.swagger.params['body'].value;
-  Player.addPlayer(body)
+  // var body = req.swagger.params['body'].value;
+  Player.addPlayer(req)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -15,8 +15,8 @@ module.exports.addPlayer = function addPlayer (req, res, next) {
 };
 
 module.exports.deletePlayer = function deletePlayer (req, res, next) {
-  var playerId = req.swagger.params['playerId'].value;
-  Player.deletePlayer(playerId)
+  // var playerId = req.swagger.params['playerId'].value;
+  Player.addPlayer(req)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -26,8 +26,9 @@ module.exports.deletePlayer = function deletePlayer (req, res, next) {
 };
 
 module.exports.getPlayerById = function getPlayerById (req, res, next) {
-  var playerId = req.swagger.params['playerId'].value;
-  Player.getPlayerById(playerId)
+  // var playerId = req.swagger.params['playerId'].value;
+  Player.addPlayer(req)
+  Player.getPlayerById(req)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -37,8 +38,9 @@ module.exports.getPlayerById = function getPlayerById (req, res, next) {
 };
 
 module.exports.updatePlayer = function updatePlayer (req, res, next) {
-  var body = req.swagger.params['body'].value;
-  Player.updatePlayer(body)
+  // var body = req.swagger.params['body'].value;
+  Player.addPlayer(req)
+  Player.updatePlayer(req)
     .then(function (response) {
       utils.writeJson(res, response);
     })
