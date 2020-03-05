@@ -1,31 +1,49 @@
-# node-examination
-
-Building a RESTful CRUD API with Node.js(>=v10.15.0), Express/Koa and MongoDB/MySQL.
-
-## Usages
-
-```
-// API documentation
-$ git clone git@github.com:bridge5/node-examination.git
-$ cd node-examination/swagger
-$ npm start
-
-$ open http://localhost:3030/docs 
-```
-
 ## Tasks
 
 1. Please read the swagger documentation and implement these features under app folder.
 2. Please add tests using your preferred testing tool (chai, mocha, Jasmine ...).
 3. Please add some features that could help you show your personal abilities.
 
-## Objectives
 
-- Please check for small things like syntax errors, since details matter.
-- Please deliver something that works, non working project is an automatic disqualification.
+### My Node CURD Project
 
-## 步骤
+input `cd app`，
 
-- 第一步：克隆这个仓库到你自己的账号里。
-- 第二步：完成下列任务。
-- 第三步：发送 * Pull Request*  到仓库 *bridge5/node-examination*。
+Install dependencies: `npm i`
+
+The application start command: `npm run start` 
+
+The application test command:`npm run test`
+
+The directory structure is as follows
+
+```
+├── config  
+│   ├── config.development.js
+│   ├── config.prod.js
+│   ├── config.test.js
+│   ├── error.map.js
+│   └── index.js
+├── controller
+│   ├── index.js
+│   └── player.js
+├── lib
+│   ├── mongoose.js
+│   └── util.js
+├── middleware
+│   └── errorHandle.js
+├── model
+│   └── player.js
+├── package-lock.json
+├── package.json
+├── router
+│   ├── index.js
+│   └── player.js
+├── router.js
+├── server.js
+├── service
+│   ├── base.js
+│   └── player.js
+└── test
+    └── player.test.js
+```
