@@ -1,31 +1,9 @@
-# node-examination
+# ReadMe
 
-Building a RESTful CRUD API with Node.js(>=v10.15.0), Express/Koa and MongoDB/MySQL.
 
-## Usages
+## 启动流程
 
-```
-// API documentation
-$ git clone git@github.com:bridge5/node-examination.git
-$ cd node-examination/swagger
-$ npm start
 
-$ open http://localhost:3030/docs 
-```
-
-## Tasks
-
-1. Please read the swagger documentation and implement these features under app folder.
-2. Please add tests using your preferred testing tool (chai, mocha, Jasmine ...).
-3. Please add some features that could help you show your personal abilities.
-
-## Objectives
-
-- Please check for small things like syntax errors, since details matter.
-- Please deliver something that works, non working project is an automatic disqualification.
-
-## 步骤
-
-- 第一步：克隆这个仓库到你自己的账号里。
-- 第二步：完成下列任务。
-- 第三步：发送 * Pull Request*  到仓库 *bridge5/node-examination*。
+1. 修改 app/src/config 文件下的对应配置
+2. 通过 app/sql 下的 sql 文件创建数据表
+3. npm test
