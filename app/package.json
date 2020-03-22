@@ -1,28 +1,28 @@
 {
+  "name": "node-example",
+  "version": "1.0.0",
   "private": true,
-  "name": "node-examination",
-  "version": "0.0.1",
-  "description": "Building a RESTful CRUD API with Node.js, Express/Koa and MongoDB.",
-  "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=development node server.js",
-    "start:prod": "NODE_ENV=production node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./app"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.9.2"
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.1",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^3.10.0"
   },
   "devDependencies": {
-    "chai": "^4.2.0"
-  },
-  "engines": {
-    "node": ">=10.15.0"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "@types/koa": "^2.0.48",
+    "chai": "^4.2.0",
+    "intelli-espower-loader": "^1.0.1",
+    "mm": "^2.2.0",
+    "mocha": "^4.1.0",
+    "nyc": "^11.9.0",
+    "power-assert": "^1.6.1",
+    "should": "^13.2.1",
+    "supertest": "^3.1.0"
+  }
 }
