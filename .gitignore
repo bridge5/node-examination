@@ -38,3 +38,5 @@ bin/Release
 
 # Mac files
 .DS_Store
+
+.env
