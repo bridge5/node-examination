@@ -17,10 +17,8 @@ async function getAllPlayers(req,res){
 async function createPlayer(req, res){
   const {name,id,position}=req.body;
   if(name && (!isNaN(id)) && position && array.includes(position)){
-
       const result =await Player.create(req.body);
       return res.send(result);
-
   }
   return res.send('Invalid input');
 }
@@ -41,7 +39,7 @@ async function updatePlayer(req, res){
   player.position=position;
   await player.save();
 
-  return res.send(await Player.findOne({id}));
+  return res.send(player);
 }
 
 

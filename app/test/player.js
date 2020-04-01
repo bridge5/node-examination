@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const Player = require('../schema/player');
 require('dotenv').config()
 var chaiHttp = require('chai-http');
