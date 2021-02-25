@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@nestjs/typeorm": "^7.1.5",
+    "mongo": "^0.1.0",
+    "typeorm": "^0.2.31"
+  }
+}
