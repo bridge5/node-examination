@@ -8,3 +8,11 @@ exports.Code = {
     FAIL: 1000,             // 内部错误
     GLOBAL_ERR: 1001,       // 全局错误
 };
+
+exports.PlayerPosition = {
+    C: 'C',
+    PF: 'PF',
+    SF: 'SF', 
+    PG: 'PG', 
+    SG: 'SG'
+};

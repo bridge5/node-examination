@@ -1,6 +1,7 @@
 'use strict';
 
 const enums = require('../lib/enum');
+
 /**
  * API返回参数统一
  */
@@ -20,9 +21,27 @@ function reqHandler(fun) {
         try {
             await fun(req, res);
         } catch (err) {
-            // TODO 打印错误日志
-            console.error(`[${req.logId}]-${req.url}: ${JSON.stringify(err)}`);
-            return res.json(resJson(enums.Code.FAIL, err.message || err || '内部错误', {}));
+            // 打印错误日志
+            console.error(`[${new Date()}]-${req.originalUrl}: ${JSON.stringify(err.stack || err)}`);
+            
+            let code = enums.Code.FAIL;
+            if (err.message){
+                switch (err.message){
+                case 'Validation exception': 
+                case 'Invalid input': 
+                    code = enums.Code.INVALID_INPUT; 
+                    break;
+                case 'Invalid ID supplied': 
+                    code = enums.Code.INVALID_ID; 
+                    break;
+                case 'Player not found': 
+                    code = enums.Code.NOT_FOUND; 
+                    break;
+                default: break;
+                }
+            }
+            
+            return res.json(resJson(code, err.message || err || '内部错误', {}));
         }
     };
 }

@@ -5,6 +5,8 @@
         "env": "dev",
         "url": "localhost: 3000"
     },
-    "mongo": "",
+    "mongo": {
+        "uri":"mongodb://player:player@localhost:27017/player"
+    },
     "redis": ""
 }
