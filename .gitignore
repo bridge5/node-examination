@@ -33,8 +33,11 @@ bin/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 **/node_modules
 
-#Webstorm metadata
+# Webstorm metadata
 .idea
 
 # Mac files
 .DS_Store
+
+# vscode
+.vscode

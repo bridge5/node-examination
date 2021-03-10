@@ -1,0 +1,12 @@
+{
+    "app": {
+        "port": 3000,
+        "name": "node-examination",
+        "env": "dev",
+        "url": "localhost: 3000"
+    },
+    "mongo": {
+        "uri":"mongodb://player:player@localhost:27017/player"
+    },
+    "redis": ""
+}
