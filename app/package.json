@@ -3,15 +3,23 @@
   "name": "node-examination",
   "version": "0.0.1",
   "description": "Building a RESTful CRUD API with Node.js, Express/Koa and MongoDB.",
-  "main": "server.js",
+  "main": "./bin/server.js",
   "scripts": {
-    "start": "NODE_ENV=development node server.js",
-    "start:prod": "NODE_ENV=production node server.js",
+    "start": "node ./bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.9.2"
+    "ioredis": "^4.27.2",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-compress": "^5.0.1",
+    "koa-router": "^10.0.0",
+    "koa-session2": "^2.2.10",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.12.7",
+    "validate": "^5.1.0",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "chai": "^4.2.0"
