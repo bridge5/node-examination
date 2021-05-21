@@ -1,0 +1,1 @@
+module.exports.positionENUM = ['C', 'PF', 'SF', 'PG', 'SG'];
