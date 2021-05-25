@@ -5,7 +5,7 @@
  * Created Date: 2021-05-24 18:22:05
  * Author: SaltFish l1218838196@gmail.com
  * -----
- * Last Modified: 2021-05-25 14:20:46
+ * Last Modified: 2021-05-25 14:25:06
  * Modified By: SaltFish
  * -----
  * Description:
@@ -37,7 +37,7 @@ class PlayerController {
    */
   validator = (ctx, requiredParams = [], values = {}) => {
     const resouceValidator = ctx.validators[this.name];
-    if (ctx.params.playerId) {
+    if (ctx.params[`${this.name.toLowerCase()}Id`]) {
       try {
         resouceValidator['id'](parseInt(ctx.params.playerId))
       } catch (error) {
