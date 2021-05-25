@@ -21,6 +21,8 @@ middleware(app)
 
 controller(app);
 
-app.listen(config.port, () => {
+const server = app.listen(config.port, () => {
   console.log('Server now listen port: ', config.port)
 })
+
+module.exports = server

@@ -5,7 +5,7 @@
  * Created Date: 2021-05-24 18:22:05
  * Author: SaltFish l1218838196@gmail.com
  * -----
- * Last Modified: 2021-05-25 14:25:06
+ * Last Modified: 2021-05-25 16:29:55
  * Modified By: SaltFish
  * -----
  * Description:
@@ -128,6 +128,7 @@ class PlayerController {
           ctx.body = `Id ${body.id} already exist!`
           return;
         }
+        body._id = body.id
       }
       const result = await model.create({
         ...body
