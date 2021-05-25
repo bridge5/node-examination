@@ -5,7 +5,7 @@
  * Created Date: 2021-05-25 16:01:52
  * Author: SaltFish l1218838196@gmail.com
  * -----
- * Last Modified: 2021-05-25 16:40:27
+ * Last Modified: 2021-05-25 16:42:49
  * Modified By: SaltFish
  * -----
  * Description:
@@ -67,5 +67,6 @@ describe('#test koa app', () => {
 })
 
 after(() => {
-  server.close()
+  server.close();
+  process.exit();
 })
