@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DELETE /player/5b8ea08eb0b2b900dcb8be53 fail cases should throw NotFoundErrorException if player is not fount 1`] = `
+[MockFunction spyHandlerDeletePlayerById] {
+  "calls": Array [
+    Array [
+      "5b8ea08eb0b2b900dcb8be53",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`DELETE /player/5b8ea08eb0b2b900dcb8be53 fail cases should throw NotFoundErrorException if player is not fount 2`] = `
+[MockFunction spyFindOne] {
+  "calls": Array [
+    Array [
+      Object {
+        "filter": Object {
+          "_id": "5b8ea08eb0b2b900dcb8be53",
+          "status": 1,
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`DELETE /player/5b8ea08eb0b2b900dcb8be53 fail cases should throw NotFoundErrorException if player is not fount 3`] = `
+Object {
+  "code": 404,
+  "message": "player not fount",
+  "path": "/player/5b8ea08eb0b2b900dcb8be53",
+  "statusCode": 404,
+  "type": "NotFoundErrorException",
+}
+`;
+
+exports[`DELETE /player/5b8ea08eb0b2b900dcb8be53 fail cases should throw Validation Error if player id is incorrect 1`] = `
+Object {
+  "code": 405,
+  "message": Array [
+    Object {
+      "msg": "{\\"isMongoId\\":\\"playerId must be a mongodb id\\"}",
+      "path": "playerId",
+      "value": "aaa",
+    },
+  ],
+  "path": "/player/aaa",
+  "statusCode": 405,
+  "type": "ValidationErrorException",
+}
+`;
+
+exports[`DELETE /player/5b8ea08eb0b2b900dcb8be53 success cases should delete player 1`] = `
+[MockFunction spyHandlerDeletePlayerById] {
+  "calls": Array [
+    Array [
+      "5b8ea08eb0b2b900dcb8be53",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`DELETE /player/5b8ea08eb0b2b900dcb8be53 success cases should delete player 2`] = `
+[MockFunction spyFindOne] {
+  "calls": Array [
+    Array [
+      Object {
+        "filter": Object {
+          "_id": "5b8ea08eb0b2b900dcb8be53",
+          "status": 1,
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`DELETE /player/5b8ea08eb0b2b900dcb8be53 success cases should delete player 3`] = `
+[MockFunction spyUpdate] {
+  "calls": Array [
+    Array [
+      Object {
+        "conditions": Object {
+          "_id": "5b8ea08eb0b2b900dcb8be53",
+        },
+        "update": Object {
+          "status": 0,
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`DELETE /player/5b8ea08eb0b2b900dcb8be53 success cases should delete player 4`] = `Object {}`;
