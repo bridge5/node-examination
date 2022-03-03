@@ -1,0 +1,15 @@
+package.json
+logs/
+npm-debug.log
+/node_modules
+/mymodel
+/onlinepayApiLog
+coverage/
+.idea/
+run/
+.DS_Store
+*.swp
+yarn.lock
+.vscode/
+config/env_config.js
+config/env_config_local.js
