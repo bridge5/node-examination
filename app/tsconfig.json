@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "target": "es2016",
+      "module": "commonjs",
+      "lib": ["es2016","dom"],
+      "outDir": "./dist",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+    },
+    "exclude": ["node_modules"]
+}
