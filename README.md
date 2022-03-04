@@ -13,6 +13,12 @@ $ npm start
 $ open http://localhost:3030/docs 
 ```
 
+## Step
+
+- Step1：克隆这个仓库到你自己的账号里。
+- Step2：完成下列任务。
+- Step3：发送 *Pull Request*  到仓库 *bridge5/node-examination*。
+- 
 ## Tasks
 
 1. Please read the swagger documentation and implement these features under app folder.
@@ -23,9 +29,3 @@ $ open http://localhost:3030/docs
 
 - Please check for small things like syntax errors, since details matter.
 - Please deliver something that works, non working project is an automatic disqualification.
-
-## 步骤
-
-- 第一步：克隆这个仓库到你自己的账号里。
-- 第二步：完成下列任务。
-- 第三步：发送 * Pull Request*  到仓库 *bridge5/node-examination*。
