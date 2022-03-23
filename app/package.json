@@ -1,20 +1,25 @@
 {
   "private": true,
   "name": "node-examination",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Building a RESTful CRUD API with Node.js, Express/Koa and MongoDB.",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=development node server.js",
-    "start:prod": "NODE_ENV=production node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=development node server.js",
+    "start:prod": "cross-env NODE_ENV=production node server.js",
+    "test": "mocha --no-timeouts --recursive ./test/test.js"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
-    "mongoose": "^5.9.2"
+    "mocha-junit-reporter": "^2.0.2",
+    "mongoose": "^5.9.2",
+    "request": "^2.88.2",
+    "supertest": "^6.2.2"
   },
   "devDependencies": {
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "mocha": "3.0.2"
   },
   "engines": {
     "node": ">=10.15.0"
