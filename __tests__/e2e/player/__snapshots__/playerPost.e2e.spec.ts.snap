@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`POST /player fail cases should throw Validation Error if request is incorrect 1`] = `
+Object {
+  "code": 405,
+  "message": Array [
+    Object {
+      "msg": "{\\"isString\\":\\"name must be a string\\"}",
+      "path": "name",
+    },
+  ],
+  "path": "/player",
+  "statusCode": 405,
+  "type": "ValidationErrorException",
+}
+`;
+
+exports[`POST /player success cases should create player 1`] = `
+[MockFunction spyHandlerCreatePlayer] {
+  "calls": Array [
+    Array [
+      Object {
+        "name": "name",
+        "position": "C",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`POST /player success cases should create player 2`] = `
+[MockFunction spyCreate] {
+  "calls": Array [
+    Array [
+      Object {
+        "docs": Object {
+          "name": "name",
+          "position": "C",
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`POST /player success cases should create player 3`] = `
+Object {
+  "createdBy": "system",
+  "id": "61cc1f3a428d36921fdcf8d2",
+  "name": "name",
+  "position": "C",
+  "status": 1,
+  "updatedBy": "system",
+}
+`;

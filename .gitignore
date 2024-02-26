@@ -5,10 +5,9 @@ logs
 lerna-debug.log
 npm-debug.log
 yarn-error.log
-yarn.lock
 stats.json
 package-lock.json
-
+.env
 # Runtime data
 pids
 *.pid

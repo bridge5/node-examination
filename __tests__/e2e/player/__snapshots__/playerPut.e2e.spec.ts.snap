@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PUT /player fail cases should throw NotFoundErrorException if player is not fount 1`] = `
+[MockFunction spyHandlerUpdatePlayer] {
+  "calls": Array [
+    Array [
+      Object {
+        "id": "61cc1f3a428d36921fdcf8d2",
+        "name": "name",
+        "position": "C",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`PUT /player fail cases should throw NotFoundErrorException if player is not fount 2`] = `
+[MockFunction spyFindOne] {
+  "calls": Array [
+    Array [
+      Object {
+        "filter": Object {
+          "_id": "61cc1f3a428d36921fdcf8d2",
+          "status": 1,
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`PUT /player fail cases should throw NotFoundErrorException if player is not fount 3`] = `
+Object {
+  "code": 404,
+  "message": "player not fount",
+  "path": "/player",
+  "statusCode": 404,
+  "type": "NotFoundErrorException",
+}
+`;
+
+exports[`PUT /player fail cases should throw Validation Error if request is incorrect 1`] = `
+Object {
+  "code": 405,
+  "message": Array [
+    Object {
+      "msg": "{\\"isMongoId\\":\\"id must be a mongodb id\\"}",
+      "path": "id",
+    },
+    Object {
+      "msg": "{\\"isString\\":\\"name must be a string\\"}",
+      "path": "name",
+    },
+  ],
+  "path": "/player",
+  "statusCode": 405,
+  "type": "ValidationErrorException",
+}
+`;
+
+exports[`PUT /player success cases should update player 1`] = `
+[MockFunction spyHandlerUpdatePlayer] {
+  "calls": Array [
+    Array [
+      Object {
+        "id": "61cc1f3a428d36921fdcf8d2",
+        "name": "name",
+        "position": "C",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`PUT /player success cases should update player 2`] = `
+[MockFunction spyFindOne] {
+  "calls": Array [
+    Array [
+      Object {
+        "filter": Object {
+          "_id": "61cc1f3a428d36921fdcf8d2",
+          "status": 1,
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`PUT /player success cases should update player 3`] = `
+[MockFunction spyUpdate] {
+  "calls": Array [
+    Array [
+      Object {
+        "conditions": Object {
+          "_id": "61cc1f3a428d36921fdcf8d2",
+        },
+        "update": Object {
+          "name": "name",
+          "position": "C",
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`PUT /player success cases should update player 4`] = `Object {}`;
